@@ -1,0 +1,12 @@
+---
+- name: making drs
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+  tasks:
+  
+  - name: making dirs
+    file: name="{{ item }}" dest=/root/ansible-learning2021 state=directory
+    with_items:
+    - /root/ansible-learning2021/new.dir
+    - /root/ansible-learning2021/new.dir1
